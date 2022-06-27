@@ -4,7 +4,13 @@ export abstract class View<T>  { // 'T' generics   // abstract não permite cria
     private escapar = false
 
     constructor(seletor: string, escapar: boolean) {
-        this.elemento = document.querySelector(seletor);
+        const elemento = document.querySelector(seletor);
+        if(elemento){
+            this.elemento = elemento as HTMLInputElement;
+        }else{
+            throw new Error(`Seletor ${seletor} não encontrado: `);
+        }
+        // this.elemento = document.querySelector(seletor);
     }
 
     public update(model: T): void {
