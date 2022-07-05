@@ -1,7 +1,6 @@
-import { View } from "./view.js"; //herança
+import { View } from "./view.js";
 export class NegociacoesView extends View {
     template(model) {
-        //retorna no futuro o html necessario + dados pra popular a view
         return `
     <table class="table table-hover table-hover table-bordered">
     <thead>
