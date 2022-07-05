@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "experimentalDecorators": true,
         "outDir": "dist/js",
         "target": "ES6",
         "noEmitOnError": true,
